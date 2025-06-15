@@ -141,9 +141,9 @@ jobs:
           run: cat kubernetes/development/*.yaml
           
           
-    integration-tesing: 
+    integration-test: 
        needs: dev-deploy
-       uses: ./.github/workflows/reusable-workflow.yml
+       uses: ./.github/worvkflows/reusable-workflow.yml
        with:
         ingress-url: ${{ needs.dev-deploy.outputs.APP_INGRESS_URL }}
 
