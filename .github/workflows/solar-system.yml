@@ -101,7 +101,8 @@ jobs:
 
     dev-deploy:
       needs: docker
-      environment: development
+      environment: 
+        name: development
       runs-on: ubuntu-latest
       steps:
         - name: checkout
@@ -110,7 +111,7 @@ jobs:
         - name: install kubectl
           uses: azure/setup-kubectl
           with:
-            version: "v1.28.1"
+            version: v1.28.1
 
         - name: set kubeconfig
           uses: azure/k8s-set-context
